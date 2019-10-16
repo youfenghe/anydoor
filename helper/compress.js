@@ -3,7 +3,7 @@ module.exports = (rs,req,res) => {
 	const acceptEncoding = req.headers['accept-encoding'];
 	if(!acceptEncoding || acceptEncoding.match(/\b(gzip|deflate)\b/)){
 		return rs;
-	}else if(acceptEncoding.match(/\bdeflate\/)){
+	}else if(acceptEncoding.match(/\b(deflate)\b/)){
 		res.setHeader('Content-Encoding','deflate');
 		return rs.pipe(createDeflate());
 	}

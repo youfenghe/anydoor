@@ -1,0 +1,13 @@
+{
+	"name": "anydoor",
+	"version": "0.0.1",
+	"description": "nodejs web server",
+	"main": "app.js",
+	"dependencies": {
+		"chalk": "^2.4.2",
+		"yargs": "^14.2.0"
+	},
+	"bin":{
+		"anydoor":"bin/www"
+	}
+}
